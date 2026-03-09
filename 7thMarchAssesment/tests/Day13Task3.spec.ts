@@ -4,8 +4,7 @@ test("test", async ({ page }) => {
   await page.goto("https://www.cricbuzz.com/");
   await page.getByRole("link", { name: "Live Scores" }).click();
   await page.getByRole("link", { name: "1st T20I • Kuala Lumpur," }).click();
-  let runs = await page
-    .locator(
+  let runs = await page.locator(
       '//div[@class="flex justify-center items-center text-sm font-bold wb:font-normal"]',
     )
     .first()
